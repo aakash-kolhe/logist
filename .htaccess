@@ -1,0 +1,19 @@
+# RewriteEngine on
+
+# RewriteCond %{THE_REQUEST} /([^.]+)\.php [NC] 
+
+# RewriteRule ^ /%1[NC,L,R]
+
+# RewriteCond %{REQUEST_FILENAME}.php -f
+
+# RewriteRule ^ %{REQUEST_URI}.php [NC,L]
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteRule ^([^\.]+)$ $1.php [NC,L]
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+#RewriteRule ^driver/([0-9]+)$ driver_master?driver_Id=$1 [QSA, L] 
+
+
